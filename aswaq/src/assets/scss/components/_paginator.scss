@@ -1,0 +1,52 @@
+.p-paginator {
+  padding: 5px !important;
+  box-shadow: 1px 1px 10px #ddd !important;
+  border-radius: 16px !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  &-element {
+    border-radius: 16px !important;
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575px) {
+      border-radius: 7px !important;
+      min-width: 2rem !important;
+      height: 2rem !important;
+    }
+
+    &:hover {
+      background: $blueColor !important;
+      color: #fff !important;
+    }
+  }
+
+  .p-highlight {
+    background: $blueColor !important;
+    color: #fff !important;
+  }
+
+  .pi-angle-double-left {
+    &::before {
+      content: "\e92e";
+    }
+  }
+
+  .pi-angle-double-right {
+    &::before {
+      content: "\e92d";
+    }
+  }
+
+  .pi-angle-left {
+    &::before {
+      content: "\e932";
+    }
+  }
+
+  .pi-angle-right {
+    &::before {
+      content: "\e931";
+    }
+  }
+}

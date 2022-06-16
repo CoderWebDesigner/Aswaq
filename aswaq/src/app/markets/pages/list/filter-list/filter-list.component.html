@@ -1,0 +1,12 @@
+<ng-container *ngIf="param=='cars'">
+  <app-car-filter (onCarFilter)="filter($event)"></app-car-filter>
+</ng-container>
+<ng-container *ngIf="param=='buildings'">
+  <app-buildings-filter (onBuildingsFilter)="filter($event)"></app-buildings-filter>
+</ng-container>
+<ng-container *ngIf="param=='furnitures'">
+  <app-furnitures-filter (onFurnituresFilter)="filter($event)"></app-furnitures-filter>
+</ng-container>
+<ng-container *ngIf="param=='animals'">
+  <app-animals-filter (onAnimalFilter)="filter($event)"></app-animals-filter>
+</ng-container>

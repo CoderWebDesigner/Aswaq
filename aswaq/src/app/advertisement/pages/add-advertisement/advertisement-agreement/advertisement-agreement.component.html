@@ -1,0 +1,34 @@
+<div class="card shadow-lg py-3 mb-4 mt-3 custom-br border-0">
+  <div class="card-body">
+    <h3 class="fw-bold mb-5">اتفاقية العمولة</h3>
+    <p>بسم الله الرحمن الرحيم</p>
+    <p>
+      قال الله تعالى:" وَأَوْفُواْ بِعَهْدِ اللهِ إِذَا عَاهَدتُّمْ وَلاَ
+      تَنقُضُواْ الأَيْمَانَ بَعْدَ تَوْكِيدِهَا وَقَدْ جَعَلْتُمُ اللهَ
+      عَلَيْكُمْ كَفِيلاً "صدق الله العظيم
+    </p>
+    <p-checkbox
+      name="groupname"
+      value="val1"
+      label="اتعهد واقسم بالله أنا المعلن أن أدفع عمولة الموقع وهي 1% من قيمة البيع سواء تم البيع عن طريق الموقع أو بسببه. * كما أتعهد بدفع العمولة خلال 10 أيام من استلام كامل مبلغ المبايعة."
+      [(ngModel)]="selectedValue"
+    ></p-checkbox>
+  </div>
+</div>
+
+<div class="d-flex justify-content-between">
+  <button
+    type="button"
+    (click)="previousPage()"
+    class="bg-blue-color text-white py-3 px-5 custom-br"
+  >
+    السابق
+  </button>
+  <button
+    type="button"
+    (click)="nextPage()"
+    class="bg-blue-color text-white py-3 px-5 custom-br"
+  >
+    التالي
+  </button>
+</div>

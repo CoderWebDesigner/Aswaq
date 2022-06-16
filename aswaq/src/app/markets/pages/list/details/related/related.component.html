@@ -1,0 +1,24 @@
+<div class="card custom-br shadow-sm mb-4 related">
+  <img [src]="relatedItemData?.logoPath" class="card-img-top custom-br" [alt]="relatedItemData?.title" >
+  <div class="card-body">
+    <h5 class="card-title mb-3 text-truncate"> <a href="" class="text-dark text-decoration-none fw-bold" routerLink="/details/{{relatedItemData?.id}}">{{relatedItemData?.title}}</a></h5>
+    <div class="card-text mb-3"><img
+      src="../../../../../assets/images/icons/user.png"
+      alt=""
+      class="user-img"
+    />
+    <span class="px-3">{{ relatedItemData?.ownerFullName }}</span></div>
+    <div class="card-text mb-3 text-truncate"> <img
+      src="../../../../../assets/images/icons/location.svg"
+      alt=""
+      class="img-fluid item-icon"
+    />
+    <span class="px-3">{{ relatedItemData?.locationDetails }}</span></div>
+    <div class="card-text mb-3"><img
+      src="../../../../../assets/images/icons/clock.svg"
+      alt=""
+      class="img-fluid item-icon"
+    />
+    <span class="px-3">{{ splitDate(relatedItemData?.creationDate) }}</span></div>
+  </div>
+</div>

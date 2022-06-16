@@ -1,0 +1,17 @@
+.advertisement-type{
+  li{
+    cursor: pointer;
+    img{
+      width: 50px;
+      filter: grayscale(100%);
+      transition: filter .4s ease-in-out;
+    }
+    &:hover{
+      img{
+        filter: grayscale(0%);
+      }
+    }
+  }
+
+
+}

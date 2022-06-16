@@ -1,0 +1,10 @@
+$colors: ("blue": $blueColor,"orange":$orangeColor,"lightBlue":$lightBlueColor);
+@each $colorText, $color in $colors {
+  .bg-#{$colorText}-color {
+    background: $color !important;
+  }
+  .text-#{$colorText}-color {
+    color: $color !important;
+  }
+}
+

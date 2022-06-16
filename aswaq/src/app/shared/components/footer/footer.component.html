@@ -1,0 +1,64 @@
+<div class="top-footer bg-dark py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 mb-sm-0 mb-4">
+        <h3 class="text-white mb-4"><span class="position-relative section-title">أسوق حراج</span></h3>
+        <ul class="p-0 list-unstyled">
+          <li *ngFor="let route of routes" class="mb-2">
+            <a href="" [routerLink]="[route.path]" class="text-white text-decoration-none">{{route.text}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-sm-0 mb-4">
+        <h3 class="text-white mb-4"><span class="position-relative section-title">تعرف علينا</span></h3>
+        <ul class="p-0 list-unstyled">
+          <li class="mb-2">
+            <a href="" [routerLink]="" class="text-white text-decoration-none"> من نحن</a>
+          </li>
+          <li class="mb-2">
+            <a href="" [routerLink]="" class="text-white text-decoration-none"> للإعلان على اسواق</a>
+          </li>
+          <li class="mb-2">
+            <a href="" [routerLink]="" class="text-white text-decoration-none"> شروط الاستخدام</a>
+          </li>
+          <li class="mb-2">
+            <a href="" [routerLink]="" class="text-white text-decoration-none"> سياسية الخصوصية</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-sm-0 mb-4">
+        <h3 class="text-white mb-4"><span class="position-relative section-title">تواصل معنا</span></h3>
+        <ul class="p-0 list-unstyled">
+          <li class="mb-2">
+            <a href="" [routerLink]="" class="text-white text-decoration-none"> الهاتف <span>0175428888</span></a>
+          </li>
+          <li class="mb-2">
+            <a href="" [routerLink]="" class="text-white text-decoration-none"> صندوق البريد</a>
+          </li>
+          <li class="mb-2">
+            <a href="" [routerLink]="" class="text-white text-decoration-none"> البريد الالكتروني</a>
+          </li>
+          <li class="mb-2">
+            <a href="" [routerLink]="" class="text-white text-decoration-none"> الفاكس</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-sm-0 mb-4">
+        <h3 class="text-white mb-4"><span class="position-relative section-title">تحميل التطبيق</span></h3>
+        <p class="text-white">يمكنك تحميل الابليكشن خدمات الأسواق</p>
+        <p class="text-white">تحميل الان</p>
+        <ul class="p-0 list-unstyled">
+          <li class="mb-3">
+            <a href=""><img src="../../../../assets/images/ios.svg" alt="" class="img-fluid"></a>
+          </li>
+          <li>
+            <a href=""><img src="../../../../assets/images/android.svg" alt="" class="img-fluid"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bottom-footer py-3 bg-lightBlue-color text-center">
+  <p class="mb-0 text-white">جميع الحقوق محفوظة لدى شركه @</p>
+</div>

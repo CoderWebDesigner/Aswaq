@@ -1,0 +1,54 @@
+
+<div class="card custom-br shadow-sm mb-4" *ngIf="dataLoaded!=0">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-8  order-sm-1 order-2">
+        <h3 class="mb-4">
+          <a
+            href=""
+            class="text-dark text-decoration-none"
+            routerLink="/details/{{ data?.id }}"
+            >{{ data?.title }} {{ advertiseType[data?.advertisementType]}}</a
+          >
+        </h3>
+        <p class="mb-4">
+          <img
+            src="../../../../../assets/images/icons/user.png"
+            alt=""
+            class="user-img"
+          />
+          <span class="px-3">{{ data?.ownerFullName }}</span>
+        </p>
+        <div class="row">
+          <div class="col-sm-8 mb-sm-0 mb-3">
+            <img
+              src="../../../../../assets/images/icons/location.svg"
+              alt=""
+              class="img-fluid item-icon"
+            />
+            <span class="px-3">{{ data?.locationDetails }}</span>
+          </div>
+          <div class="col-sm-4 text-sm-start mb-sm-0 mb-3">
+            <img
+              src="../../../../../assets/images/icons/clock.svg"
+              alt=""
+              class="img-fluid item-icon"
+            />
+            <span class="px-3">{{ splitDate(data?.creationDate) }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4  order-sm-2 order-1 mb-sm-0 mb-3">
+        <div class="loading d-flex justify-content-center align-items-center h-100" *ngIf="imgLoading">
+          <div class="loading-circle"></div>
+        </div>
+        <img
+          [src]="data?.logoPath"
+          [alt]="data?.title"
+          class="img-fluid custom-br item-img"
+          (load)="loadingImg()"
+        />
+      </div>
+    </div>
+  </div>
+</div>

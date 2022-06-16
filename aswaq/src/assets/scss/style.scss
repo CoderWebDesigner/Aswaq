@@ -1,0 +1,24 @@
+@import 'node_modules/ngx-sharebuttons/themes/default.scss';
+@import 'helpers/variables';
+@import 'helpers/colors';
+@import 'helpers/border';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'components/card';
+@import 'components/form';
+@import 'components/paginator';
+@import 'components/carousal';
+@import 'components/button';
+@import 'components/steps';
+@import 'pages/markets';
+@import 'pages/details';
+@import 'pages/advetisement';
+@font-face {
+  font-family: 'Almarai';
+  src: url('../fonts/Almarai-Regular.ttf');
+}
+
+body{
+  direction: rtl ;
+  font-family: $almaraiFont;
+}

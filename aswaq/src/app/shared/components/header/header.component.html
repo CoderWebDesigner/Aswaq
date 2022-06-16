@@ -1,0 +1,178 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="/"><img src="../../../../assets/images/icons/logo.png" alt=""></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class=" navbar-collapse" [ngClass]="{'collapse':isCollapsed}" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item" (click)="getNavPath('auction')">
+        <a class="nav-link text-blue-color text-center px-4" href="#" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.529 66.854">
+            <g id="svgexport-10_1_" data-name="svgexport-10 (1)" transform="translate(0.5 1.553)">
+              <g id="_29-auction" data-name="29-auction" transform="translate(0 -0.846)">
+                <g id="Glyph" transform="translate(0 0)">
+                  <path id="Path_10518" data-name="Path 10518" d="M0,88H37.96v5.423H0Z" transform="translate(0 -27.775)"   stroke-width="1"/>
+                  <path id="Path_10519" data-name="Path 10519" d="M35.114,78.646A2.711,2.711,0,0,0,32.4,75.935H10.711A2.711,2.711,0,0,0,8,78.646V81.4H35.114Z" transform="translate(-2.577 -23.889)"   stroke-width="1"/>
+                  <path id="Path_10520" data-name="Path 10520" d="M52.932,45.739a18.916,18.916,0,0,0-3.145,4.524L72.1,72.581a2.711,2.711,0,0,0,3.834,0l3.835-3.835a2.711,2.711,0,0,0,0-3.835L57.456,42.6a18.48,18.48,0,0,0-4.524,3.139Z" transform="translate(-16.039 -13.15)"   stroke-width="1"/>
+                  <path id="Path_10521" data-name="Path 10521" d="M31.3,24.1A23.512,23.512,0,0,1,24.287,28.6L38.3,42.611a23.9,23.9,0,0,1,4.5-7.006,23.532,23.532,0,0,1,7.009-4.494L35.8,17.1a23.916,23.916,0,0,1-4.5,7Z" transform="translate(-7.824 -4.935)"   stroke-width="1"/>
+                  <rect id="Rectangle_938" data-name="Rectangle 938" width="10.846" height="27.114" rx="4" transform="translate(27.303 7.668) rotate(-45)"   stroke-width="1"/>
+                  <rect id="Rectangle_939" data-name="Rectangle 939" width="10.846" height="27.114" rx="4" transform="translate(4.296 30.671) rotate(-45)"   stroke-width="1"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <p class="mt-2 mb-0">المزادات</p>
+        </a>
+      </li>
+      <li class="nav-item" (click)="getNavPath('buildings')">
+        <a class="nav-link text-blue-color text-center px-4" href="#" routerLink="/" routerLinkActive="active" [queryParams]="{'market':'buildings'}" [queryParamsHandling]="'merge'">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.03 69.03">
+            <g id="Group_16562" data-name="Group 16562" transform="translate(0.5 0.5)">
+              <g id="Group_16561" data-name="Group 16561" transform="translate(18.602)">
+                <path id="Path_10513" data-name="Path 10513" d="M271,430h3.986v10.9H271Z" transform="translate(-253.594 -372.865)"   stroke-width="1"/>
+                <path id="Path_10514" data-name="Path 10514" d="M211,430h3.986v10.9H211Z" transform="translate(-201.566 -372.865)"   stroke-width="1"/>
+                <path id="Path_10515" data-name="Path 10515" d="M168.833,0h-26.84A1.993,1.993,0,0,0,140,1.993V68.03h5.448V55.142a1.993,1.993,0,0,1,1.993-1.993h15.945a1.993,1.993,0,0,1,1.993,1.993V68.03h5.448V1.993A1.993,1.993,0,0,0,168.833,0Zm-19.4,47.169a1.993,1.993,0,1,1-3.986,0V43.183a1.993,1.993,0,1,1,3.986,0Zm0-11.958a1.993,1.993,0,0,1-3.986,0V31.225a1.993,1.993,0,1,1,3.986,0Zm7.972,11.958a1.993,1.993,0,1,1-3.986,0V43.183a1.993,1.993,0,1,1,3.986,0Zm0-11.958a1.993,1.993,0,1,1-3.986,0V31.225a1.993,1.993,0,1,1,3.986,0Zm7.972,11.958a1.993,1.993,0,1,1-3.986,0V43.183a1.993,1.993,0,1,1,3.986,0Zm0-11.958a1.993,1.993,0,1,1-3.986,0V31.225a1.993,1.993,0,1,1,3.986,0ZM149.434,23.253a1.993,1.993,0,1,1-3.986,0V19.266a1.993,1.993,0,1,1,3.986,0Zm7.972,0a1.993,1.993,0,1,1-3.986,0V19.266a1.993,1.993,0,1,1,3.986,0Zm7.972,0a1.993,1.993,0,1,1-3.986,0V19.266a1.993,1.993,0,1,1,3.986,0ZM149.434,11.294a1.993,1.993,0,1,1-3.986,0V7.308a1.993,1.993,0,1,1,3.986,0Zm7.972,0a1.993,1.993,0,1,1-3.986,0V7.308a1.993,1.993,0,1,1,3.986,0Zm7.972,0a1.993,1.993,0,1,1-3.986,0V7.308a1.993,1.993,0,1,1,3.986,0Z" transform="translate(-140)"   stroke-width="1"/>
+              </g>
+              <path id="Path_10516" data-name="Path 10516" d="M414.623,200H402v41.456h12.623a1.993,1.993,0,0,0,1.993-1.993v-37.47A1.993,1.993,0,0,0,414.623,200ZM411.3,225.91a1.993,1.993,0,1,1-3.986,0v-3.986a1.993,1.993,0,1,1,3.986,0Zm0-11.958a1.993,1.993,0,1,1-3.986,0v-3.986a1.993,1.993,0,1,1,3.986,0Z" transform="translate(-348.586 -173.426)"   stroke-width="1"/>
+              <path id="Path_10517" data-name="Path 10517" d="M1.993,200A1.993,1.993,0,0,0,0,201.993v37.47a1.993,1.993,0,0,0,1.993,1.993H14.616V200ZM9.3,225.91a1.993,1.993,0,0,1-3.986,0v-3.986a1.993,1.993,0,1,1,3.986,0Zm0-11.958a1.993,1.993,0,0,1-3.986,0v-3.986a1.993,1.993,0,0,1,3.986,0Z" transform="translate(0 -173.426)"   stroke-width="1"/>
+            </g>
+          </svg>
+          <p class="mt-2 mb-0">العقارات</p>
+        </a>
+      </li>
+      <li class="nav-item" (click)="getNavPath('furnitures')">
+        <a class="nav-link text-blue-color text-center px-4" href="#" routerLink="/" routerLinkActive="active" [queryParams]="{'market':'furnitures'}" [queryParamsHandling]="'merge'">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 68">
+            <g id="svgexport-6_2_" data-name="svgexport-6 (2)" transform="translate(0.5 0.5)">
+              <g id="Group_16563" data-name="Group 16563">
+                <path id="Path_10522" data-name="Path 10522" d="M65.691,0H1.309A1.309,1.309,0,0,0,0,1.309V5.333A1.309,1.309,0,0,0,1.309,6.641H65.691A1.309,1.309,0,0,0,67,5.333V1.309A1.309,1.309,0,0,0,65.691,0Z"   stroke-width="1"/>
+                <path id="Path_10523" data-name="Path 10523" d="M42.46,100.791H98.347V80.76H42.46ZM67.78,88.812h5.247a1.963,1.963,0,0,1,0,3.926H67.78a1.963,1.963,0,0,1,0-3.926Z" transform="translate(-36.904 -70.192)"   stroke-width="1"/>
+                <path id="Path_10524" data-name="Path 10524" d="M42.46,283.859H98.347V263.83H42.46Zm25.32-11.978h5.247a1.963,1.963,0,0,1,0,3.926H67.78a1.963,1.963,0,0,1,0-3.926Z" transform="translate(-36.904 -229.305)"   stroke-width="1"/>
+                <path id="Path_10525" data-name="Path 10525" d="M94.03,455.41h5.225l1.955-8.52H94.03Z" transform="translate(-81.725 -388.41)"   stroke-width="1"/>
+                <path id="Path_10526" data-name="Path 10526" d="M365.055,455.41h5.225v-8.52H363.1Z" transform="translate(-315.585 -388.41)"   stroke-width="1"/>
+              </g>
+            </g>
+          </svg>
+
+          <p class="mt-2 mb-0">الاثاث</p>
+        </a>
+      </li>
+      <li class="nav-item" (click)="getNavPath('cars')">
+        <a class="nav-link text-blue-color text-center px-4" href="#" routerLink="/" routerLinkActive="active" [queryParams]="{'market':'cars'}" [queryParamsHandling]="'merge'">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.157 67.596">
+            <g id="car_1_" data-name="car (1)" transform="translate(-0.373 0.673)">
+              <path id="Path_10506" data-name="Path 10506" d="M32.989,9.191l.585,1.562.585-1.562a4.87,4.87,0,0,1,2.856-2.854l1.554-.585-1.554-.585a4.872,4.872,0,0,1-2.853-2.856L33.576.75l-.588,1.562a4.872,4.872,0,0,1-2.853,2.856l-1.562.585,1.562.585a4.87,4.87,0,0,1,2.853,2.854Z" transform="translate(11.421)"   stroke-width="1"/>
+              <path id="Path_10507" data-name="Path 10507" d="M40.357,12.663l.442,1.184.438-1.184A3.69,3.69,0,0,1,43.4,10.5l1.184-.443L43.4,9.611a3.69,3.69,0,0,1-2.165-2.165l-.443-1.184-.442,1.184a3.7,3.7,0,0,1-2.165,2.165L37,10.054l1.185.443A3.7,3.7,0,0,1,40.357,12.663Z" transform="translate(14.896 2.273)"   stroke-width="1"/>
+              <path id="Path_10508" data-name="Path 10508" d="M45.04,8.006l.442,1.185.443-1.185a3.7,3.7,0,0,1,2.165-2.165L49.274,5.4l-1.184-.443a3.69,3.69,0,0,1-2.165-2.165l-.443-1.184L45.04,2.791a3.7,3.7,0,0,1-2.165,2.165L41.69,5.4l1.185.442A3.706,3.706,0,0,1,45.04,8.006Z" transform="translate(16.829 0.353)"   stroke-width="1"/>
+              <path id="Path_10509" data-name="Path 10509" d="M39.881,44.95v2.942a1.432,1.432,0,0,0,1.439,1.432h5.508a1.432,1.432,0,0,0,1.432-1.432v-5.67a9.29,9.29,0,0,1-6.971,2.729Z" transform="translate(16.083 17.099)"   stroke-width="1"/>
+              <path id="Path_10510" data-name="Path 10510" d="M2.132,42.162v5.754a1.432,1.432,0,0,0,1.432,1.432H9.072A1.432,1.432,0,0,0,10.5,47.916V44.974H9.184a9.256,9.256,0,0,1-7.052-2.812Z" transform="translate(0.519 17.075)"   stroke-width="1"/>
+              <path id="Path_10511" data-name="Path 10511" d="M2.161,38.442c0,4.059,2.825,6.425,7.011,6.425H56.839c4.18,0,7.011-2.366,7.011-6.425V37.27H2.161Z" transform="translate(0.531 15.058)"   stroke-width="1"/>
+              <path id="Path_10512" data-name="Path 10512" d="M65.03,22.837,61.5,22.224a1.271,1.271,0,0,0-1.387.751l-1.1,2.484-.446-.681-3.1-7.309a7.58,7.58,0,0,0-5.783-4.542,104.192,104.192,0,0,0-16.153-1.179,104.157,104.157,0,0,0-16.151,1.184,7.581,7.581,0,0,0-5.79,4.542l-3.089,7.3-.439.671L6.96,22.969a1.271,1.271,0,0,0-1.387-.751l-3.532.62A1.39,1.39,0,0,0,.873,24.212v.693a1.4,1.4,0,0,0,1.1,1.363l4.836,1.106L4.49,30.9a10.971,10.971,0,0,0-1.8,6.016v8.756H64.38V36.921a10.971,10.971,0,0,0-1.8-6.015l-2.326-3.549L65.1,26.265A1.4,1.4,0,0,0,66.2,24.9v-.693a1.39,1.39,0,0,0-1.169-1.371ZM13.55,18.3a5.433,5.433,0,0,1,4.168-3.278,102.251,102.251,0,0,1,15.818-1.157,102.251,102.251,0,0,1,15.818,1.157A5.435,5.435,0,0,1,53.518,18.3l2.38,5.613H11.17ZM9.057,38.781a2.094,2.094,0,0,1-1.736-1.589,4.586,4.586,0,0,1-.148-1.462c.114-1.271.514-1.9,1.322-1.9,0,0,5.539.345,6.288.575S18.4,40.1,18.4,40.1ZM44.54,40.9l-11.073.633-10.937-.617L19.741,35s9.825.856,13.793.856S47.33,35,47.33,35Zm15.208-3.7a2.094,2.094,0,0,1-1.736,1.589l-9.347,1.319s2.874-5.461,3.623-5.692,6.286-.575,6.286-.575c.809,0,1.208.631,1.322,1.9a4.585,4.585,0,0,1-.148,1.462Z" transform="translate(0 4.535)"   stroke-width="1"/>
+            </g>
+          </svg>
+          <p class="mt-2 mb-0">السيارات</p>
+        </a>
+      </li>
+      <li class="nav-item" (click)="getNavPath('animals')">
+        <a class="nav-link text-blue-color text-center px-4" href="#" routerLink="/" routerLinkActive="active" [queryParams]="{'market':'animals'}" [queryParamsHandling]="'merge'">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 66">
+            <g id="svgexport-6_15_" data-name="svgexport-6 (15)" transform="translate(-6.667 -6.985)">
+              <g id="cow" transform="translate(7 6.985)">
+                <path id="Path_10626" data-name="Path 10626" d="M63.288,50.149v2a10.108,10.108,0,0,1-10,10h-30a10.108,10.108,0,0,1-10-10c0-3.415-.347-6.874,4-10,3.441-2.627,3.114-2,36-2A10.182,10.182,0,0,1,63.288,50.149Z" transform="translate(-5.121 3.351)"   stroke-width="1"/>
+                <ellipse id="Ellipse_2442" data-name="Ellipse 2442" cx="3.5" cy="3" rx="3.5" ry="3" transform="translate(18.167 51.5)"   stroke-width="1"/>
+                <circle id="Ellipse_2443" data-name="Ellipse 2443" cx="3" cy="3" r="3" transform="translate(41.167 51.5)"   stroke-width="1"/>
+                <g id="Group_16752" data-name="Group 16752" transform="translate(0 11.818)">
+                  <path id="Path_10627" data-name="Path 10627" d="M26.167,15.66v2a17.692,17.692,0,0,0-7,12c-2.627.788-3.779,1-12,1,0-7.979,6.021-15,14-15Z" transform="translate(-7 -15.978)"   stroke-width="1"/>
+                  <path id="Path_10628" data-name="Path 10628" d="M26.167,15.66v2a17.692,17.692,0,0,0-7,12c-2.627.788-3.779,1-12,1,0-7.979,6.021-15,14-15Z" transform="translate(-7 -15.978)"   stroke-width="1"/>
+                  <path id="Path_10629" data-name="Path 10629" d="M62.043,30.666c-8.287,0-10.452-.225-13-1-.514-4.888-2.161-8.93-6-12l-1-2c5.122,0,10.193.193,15,5C59.752,23.376,62.045,26.834,62.043,30.666Z" transform="translate(4.123 -15.983)"   stroke-width="1"/>
+                </g>
+                <path id="Path_10630" data-name="Path 10630" d="M30.68,16.485a18.424,18.424,0,0,0-9,4c.3-1.812-.773-.1,1-11,.242-1.5,1.478-2,3-2s3.758.5,4,2Z" transform="translate(-2.513 -6.985)"   stroke-width="1"/>
+                <path id="Path_10631" data-name="Path 10631" d="M58.325,32.3v18c-3.441-2.561-3.114-2-36-2a10.343,10.343,0,0,0-6,2c0-19.2-.092-18.463,0-20a17.7,17.7,0,0,1,18-16,60.913,60.913,0,0,1,8,0A18.244,18.244,0,0,1,58.325,32.3Z" transform="translate(-4.158 -4.801)"   stroke-width="1"/>
+                <path id="Path_10632" data-name="Path 10632" d="M28.34,30.4a2,2,0,1,1-2-2A2.022,2.022,0,0,1,28.34,30.4Z" transform="translate(-1.673 -0.4)" />
+                <path id="Path_10633" data-name="Path 10633" d="M41.267,30.4a2,2,0,1,1-2-2A2.022,2.022,0,0,1,41.267,30.4Z" transform="translate(2.4 -0.4)" />
+                <path id="Path_10634" data-name="Path 10634" d="M45.14,20.476a18.424,18.424,0,0,0-9-4l1-7c.242-1.5,1.478-2,3-2s2.758.5,3,2C44.926,20.14,44.824,18.624,45.14,20.476Z" transform="translate(2.027 -6.976)"   stroke-width="1"/>
+              </g>
+            </g>
+          </svg>
+
+          <p class="mt-2 mb-0">المواشى</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-blue-color text-center px-4" href="#" routerLink="/services" routerLinkActive="active">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.82 78.268">
+            <g id="services-2" transform="translate(-3.954 0.613)">
+              <g id="Group_16569" data-name="Group 16569" transform="translate(62.348 38.633)">
+                <g id="Group_16568" data-name="Group 16568">
+                  <path id="Path_10544" data-name="Path 10544" d="M356.734,233.876a1.325,1.325,0,0,0-2.371.608l-.735,5.153a1.293,1.293,0,0,1-.069.193,23.814,23.814,0,0,0,3.239-5.869Z" transform="translate(-353.559 -233.346)"   stroke-width="1"/>
+                </g>
+              </g>
+              <g id="Group_16571" data-name="Group 16571" transform="translate(19.44 6.97)">
+                <g id="Group_16570" data-name="Group 16570">
+                  <path id="Path_10545" data-name="Path 10545" d="M136.09,81.211a1.467,1.467,0,0,1-.187-.012l-7.868-1.125a1.325,1.325,0,0,1-1.123-1.5h0l.735-5.153a1.325,1.325,0,0,0-2.1-1.246L121.377,75.3a1.325,1.325,0,0,1-1.854-.265h0l-4.769-6.358a1.325,1.325,0,0,1,.265-1.854l4.163-3.122a1.325,1.325,0,0,0-.608-2.371l-5.153-.737a1.325,1.325,0,0,1-1.125-1.5h0l1.125-7.867a1.325,1.325,0,0,1,1.5-1.125h0l5.153.737A1.317,1.317,0,0,0,121.4,50.2a1.3,1.3,0,0,0-.079-1.47l-3.12-4.162a1.325,1.325,0,0,1,.265-1.855l.751-.563a24.289,24.289,0,0,0-3.648.1,23.844,23.844,0,0,0-10.149,43.772,7.6,7.6,0,0,1,3.592,6.362v5.353a3.974,3.974,0,0,0,3.974,3.974h10.6a3.974,3.974,0,0,0,3.974-3.974V92.49a7.8,7.8,0,0,1,3.669-6.52,24,24,0,0,0,5.528-4.954A1.323,1.323,0,0,1,136.09,81.211ZM119.607,97.733h-2.649V93.759h2.649Zm-2.649-6.623a8.457,8.457,0,0,0-5.431-7.895A18.545,18.545,0,0,1,108.4,50.25l1.405,2.241a15.9,15.9,0,0,0,2.678,28.259,11.083,11.083,0,0,1,7.124,10.36Z" transform="translate(-94.426 -42.12)"   stroke-width="1"/>
+                </g>
+              </g>
+              <g id="Group_16573" data-name="Group 16573" transform="translate(37.998 73.18)">
+                <g id="Group_16572" data-name="Group 16572">
+                  <path id="Path_10546" data-name="Path 10546" d="M206.5,441.987v1.325a2.649,2.649,0,0,0,2.649,2.649h5.3a2.649,2.649,0,0,0,2.649-2.649v-1.325Z" transform="translate(-206.503 -441.987)"   stroke-width="1"/>
+                </g>
+              </g>
+              <g id="Group_16575" data-name="Group 16575" transform="translate(5.857 34.315)">
+                <g id="Group_16574" data-name="Group 16574" transform="translate(0)">
+                  <path id="Path_10547" data-name="Path 10547" d="M36.251,224.938a25.07,25.07,0,0,1-2.264-1.654,7.932,7.932,0,1,1-8.01-11.524,25.226,25.226,0,0,1-1.049-4.492l-.232,1.1a2.649,2.649,0,0,1-4.094,1.637l-2.755-1.892-2.414,2.408,1.9,2.758a2.649,2.649,0,0,1-1.636,4.1l-3.3.7v3.147l3.3.7a2.649,2.649,0,0,1,1.635,4.1l-1.9,2.743,2.414,2.408,2.753-1.9a2.649,2.649,0,0,1,4.1,1.636l.694,3.308h3.149l.694-3.3a2.649,2.649,0,0,1,4.1-1.636l2.751,1.892,2.841-2.841A6.466,6.466,0,0,0,36.251,224.938Z" transform="translate(-12.391 -207.267)"   stroke-width="1"/>
+                </g>
+              </g>
+              <g id="Group_16577" data-name="Group 16577" transform="translate(37.998 67.882)">
+                <g id="Group_16576" data-name="Group 16576">
+                  <rect id="Rectangle_940" data-name="Rectangle 940" width="10.597" height="2.649"   stroke-width="1"/>
+                </g>
+              </g>
+              <g id="Group_16579" data-name="Group 16579" transform="translate(40.118 3.153)">
+                <g id="Group_16578" data-name="Group 16578">
+                  <path id="Path_10548" data-name="Path 10548" d="M255.557,38.746a3.974,3.974,0,0,1-1.821-7.113l3.1-2.329-3.179-4.239-3.1,2.327a3.974,3.974,0,0,1-6.32-3.736l.548-3.841-5.244-.748-.548,3.841a3.974,3.974,0,0,1-7.113,1.821l-2.329-3.109L225.312,24.8l2.327,3.1a3.974,3.974,0,0,1-3.742,6.319l-3.841-.548-.752,5.246,3.841.548a3.974,3.974,0,0,1,1.821,7.113l-3.1,2.329,3.179,4.239,3.1-2.327a3.974,3.974,0,0,1,6.319,3.742l-.548,3.841,5.256.752.548-3.841a3.974,3.974,0,0,1,7.113-1.821l2.329,3.1,4.239-3.179-2.335-3.109A3.974,3.974,0,0,1,254.8,43.99l3.841.548.748-5.244Zm-16.2,8.31a7.948,7.948,0,1,1,7.948-7.948A7.948,7.948,0,0,1,239.353,47.055Z" transform="translate(-219.303 -19.067)"   stroke-width="1"/>
+                </g>
+              </g>
+              <g id="Group_16581" data-name="Group 16581" transform="translate(68.465 49.337)">
+                <g id="Group_16580" data-name="Group 16580">
+                  <rect id="Rectangle_941" data-name="Rectangle 941" width="9.273" height="2.649"   stroke-width="1"/>
+                </g>
+              </g>
+              <g id="Group_16583" data-name="Group 16583" transform="translate(66.293 56.266)">
+                <g id="Group_16582" data-name="Group 16582" transform="translate(0 0)">
+                  <rect id="Rectangle_942" data-name="Rectangle 942" width="2.649" height="10.345" transform="matrix(0.64, -0.768, 0.768, 0.64, 0, 2.035)"   stroke-width="1"/>
+                </g>
+              </g>
+              <g id="Group_16585" data-name="Group 16585" transform="translate(60.517 59.934)">
+                <g id="Group_16584" data-name="Group 16584">
+                  <rect id="Rectangle_943" data-name="Rectangle 943" width="2.649" height="9.273"   stroke-width="1"/>
+                </g>
+              </g>
+              <g id="Group_16587" data-name="Group 16587" transform="translate(4.56 20.233)">
+                <g id="Group_16586" data-name="Group 16586" transform="translate(0 0)">
+                  <rect id="Rectangle_944" data-name="Rectangle 944" width="10.923" height="2.648" transform="translate(0 2.649) rotate(-14.035)"   stroke-width="1"/>
+                </g>
+              </g>
+              <g id="Group_16589" data-name="Group 16589" transform="translate(6.761 7.196)">
+                <g id="Group_16588" data-name="Group 16588" transform="translate(0 0)">
+                  <rect id="Rectangle_945" data-name="Rectangle 945" width="2.648" height="11.395" transform="matrix(0.581, -0.814, 0.814, 0.581, 0, 2.155)"   stroke-width="1"/>
+                </g>
+              </g>
+              <g id="Group_16591" data-name="Group 16591" transform="translate(18.11 -0.005)">
+                <g id="Group_16590" data-name="Group 16590" transform="translate(0 0)">
+                  <rect id="Rectangle_946" data-name="Rectangle 946" width="2.649" height="10.938" transform="matrix(0.969, -0.248, 0.248, 0.969, 0, 0.656)"   stroke-width="1"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          <p class="mt-2 mb-0">خدمات مسانده</p>
+        </a>
+      </li>
+
+    </ul>
+    <div class="me-auto">
+      <div class="d-inline-block px-4"><img src="../../../../assets/images/images.png" alt="" class="user-image px-2 custom-br"> مرحبا , احمد رمزي</div>
+      <button class="btn orange-btn py-3 px-5 custom-br" routerLink="/advertisement">إضافة اعلانك</button>
+    </div>
+  </div>
+</nav>

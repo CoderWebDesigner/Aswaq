@@ -1,0 +1,120 @@
+<form
+  class="filter-box p-3 custom-br"
+  [formGroup]="filterForm"
+  (ngSubmit)="filter()"
+>
+  <div class="mb-3">
+    <h4
+      class="text-white bg-blue-color py-3 px-5 custom-br"
+    >
+      الفلترة | والتصفية
+  </h4>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">المنطقة</label>
+    <p-dropdown
+      [options]="states"
+      emptyMessage="لا يوجد بيانات"
+      emptyFilterMessage="لا يوجد نتائج"
+      placeholder="كل المناطق"
+      optionLabel="name"
+      [filter]="true"
+      filterBy="name"
+      styleClass="w-100 custom-br"
+      (onChange)="getSelectedState($event)"
+      formControlName="state"
+    ></p-dropdown>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">المدن</label>
+    <p-dropdown
+      [disabled]="cities.length == 0"
+      [options]="cities"
+      emptyMessage="لا يوجد بيانات"
+      emptyFilterMessage="لا يوجد نتائج"
+      placeholder="كل المدن"
+      optionLabel="name"
+      [filter]="true"
+      filterBy="name"
+      styleClass="w-100 custom-br"
+      (onChange)="getSelectedGovernorates($event)"
+      formControlName="governorate"
+    ></p-dropdown>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">الحي</label>
+    <p-dropdown
+      [disabled]="squares.length == 0"
+      [options]="squares"
+      emptyMessage="لا يوجد بيانات"
+      emptyFilterMessage="لا يوجد نتائج"
+      placeholder="كل الاحياء"
+      optionLabel="name"
+      [filter]="true"
+      filterBy="name"
+      styleClass="w-100 custom-br"
+      formControlName="square"
+    ></p-dropdown>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">ماركه السيارة</label>
+    <p-dropdown
+      [options]="carCompanies"
+      emptyMessage="لا يوجد بيانات"
+      emptyFilterMessage="لا يوجد نتائج"
+      placeholder="كل الماركات"
+      optionLabel="name"
+      [filter]="true"
+      filterBy="name"
+      styleClass="w-100 custom-br"
+      formControlName="carCompany"
+      (onChange)="getSelectedCarCompany($event)"
+    ></p-dropdown>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">موديل السيارة</label>
+    <p-dropdown
+    [disabled]="carsModel.length==0"
+      [options]="carsModel"
+      emptyMessage="لا يوجد بيانات"
+      emptyFilterMessage="لا يوجد نتائج"
+      placeholder="كل موديلات السيارات"
+      optionLabel="name"
+      [filter]="true"
+      filterBy="name"
+      styleClass="w-100 custom-br"
+      formControlName="model"
+    ></p-dropdown>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">نوع السيارة</label>
+    <p-dropdown
+    [disabled]="carTypes.length==0"
+      [options]="carTypes"
+      emptyMessage="لا يوجد بيانات"
+      emptyFilterMessage="لا يوجد نتائج"
+      placeholder="كل انواع السيارات"
+      optionLabel="name"
+      [filter]="true"
+      filterBy="name"
+      styleClass="w-100 custom-br"
+      formControlName="carType"
+    ></p-dropdown>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">سنة الموديل</label>
+    <p-dropdown
+      [options]="modelYears"
+      emptyMessage="لا يوجد بيانات"
+      emptyFilterMessage="لا يوجد نتائج"
+      placeholder="سنة الموديل"
+      optionLabel="name"
+      [filter]="true"
+      filterBy="name"
+      styleClass="w-100 custom-br"
+      formControlName="modelYear"
+    ></p-dropdown>
+  </div>
+  <button class="text-white bg-orange-color py-3 px-5 custom-br border-0 w-100" type="submit">فلتر السيارات</button>
+</form>

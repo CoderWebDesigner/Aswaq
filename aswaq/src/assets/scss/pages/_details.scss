@@ -1,0 +1,95 @@
+
+.details{
+  // background: #F7F7F7;
+  &-header{
+    height: 66px;
+    // height: 300px;
+    h1 {
+      z-index: 2;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba($blueColor, .86);
+      z-index: 1;
+    }
+  }
+  .item-price{
+    color: #C1292E;
+    font-size: 30px;
+  }
+  p{
+    img{
+      width: 40px;
+    }
+  }
+  button{
+    svg{
+      fill: #fff;
+      height: 30px;
+      transition: fill .4s ease-in-out;
+    }
+    &:hover{
+      svg{
+        fill: $orangeColor;
+      }
+    }
+  }
+  &-specifications-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .specification {
+      height: 100px;
+      flex: 0 0 165px;
+      margin: 0  0 0 20px;
+      background: #F3FAFF;
+      padding-top: 15px;
+      padding-right: 15px;
+    }
+  }
+  .comments{
+    svg{
+      width: 20px;
+    }
+  }
+  .related{
+    img.card-img-top{
+      height: 200px;
+      padding: 10px;
+    }
+    .item-icon{
+      width: 17px;
+    }
+    .user-img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+  li{
+    i{
+      font-size: 38px;
+    }
+  }
+}
+
+.bg-car{
+  // background-image: url('../../images/car.jpg');
+  // background-position: -36px -620px;
+}
+.bg-animal{
+  // background-image: url('../../images/animal.png');
+  // background-position: -36px -754px;
+}
+.bg-furniture{
+  // background-image: url('../../images/furniture.png');
+  // background-position: -36px -754px;
+}
+.bg-building{
+  // background-image: url('../../images/building.png');
+  // background-position: -36px -754px;
+}

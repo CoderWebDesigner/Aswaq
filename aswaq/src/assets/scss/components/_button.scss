@@ -1,0 +1,22 @@
+$colors: ("blue": $blueColor,"orange":$orangeColor,"lightBlue":$lightBlueColor);
+@each $colorText, $color in $colors {
+  .#{$colorText}-btn {
+    background: $color;
+    border: 2px solid transparent;
+    color: #fff;
+    transition: all .4s ease-in-out;
+    &:hover{
+      background: #fff;
+      border: 2px solid $color;
+      color: $color;
+    }
+  }
+}
+
+.sb-button{
+  button{
+    width: 70px !important;
+    height: 40px !important;
+    line-height: 10px !important;
+  }
+}

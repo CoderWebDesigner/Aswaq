@@ -1,0 +1,18 @@
+footer{
+  .section-title{
+    &::after{
+      content: '';
+      position: absolute;
+      height: 5px;
+      width: 50px;
+      left: 0;
+      bottom: -15px;
+      background: $orangeColor;
+      border-radius: 25px;
+    }
+  }
+  img{
+    width: 160px;
+  }
+}
+

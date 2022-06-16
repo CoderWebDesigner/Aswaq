@@ -1,0 +1,231 @@
+<div class="comments">
+  <!-- Add Comment -->
+  <div class="comment-add mb-4">
+    <form
+      class="row bg-white custom-br shadow-sm py-3 px-4"
+      [formGroup]="commentForm"
+      (ngSubmit)="add('comment')"
+    >
+      <div class="col-3">
+        <label class="d-inline-block">
+          <img
+            src="../../../../../assets/images/icons/user.png"
+            alt=""
+            class="user-img"
+          />
+          <span class="px-3">{{ user }}</span>
+        </label>
+      </div>
+      <div class="col-8">
+        <div class="input-group bg-light rounded-pill border">
+          <div class="input-group-text border-0 bg-transparent">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="28"
+              viewBox="0 0 30 28"
+            >
+              <g id="commegr" transform="translate(-1 -2)">
+                <g id="_x31_4_comment">
+                  <g id="Group_16865" data-name="Group 16865">
+                    <path
+                      id="Path_10926"
+                      data-name="Path 10926"
+                      d="M8,30a1,1,0,0,1-1-1V24H4a3,3,0,0,1-3-3V5A3,3,0,0,1,4,2H28a3,3,0,0,1,3,3V21a3,3,0,0,1-3,3H15.851L8.625,29.781A1,1,0,0,1,8,30ZM4,4A1,1,0,0,0,3,5V21a1,1,0,0,0,1,1H8a1,1,0,0,1,1,1v3.92l5.875-4.7A1,1,0,0,1,15.5,22H28a1,1,0,0,0,1-1V5a1,1,0,0,0-1-1Z"
+                      fill="#acacac"
+                    />
+                  </g>
+                  <g id="Group_16866" data-name="Group 16866">
+                    <path
+                      id="Path_10927"
+                      data-name="Path 10927"
+                      d="M24,12H8a1,1,0,0,1,0-2H24a1,1,0,0,1,0,2Z"
+                      fill="#acacac"
+                    />
+                  </g>
+                  <g id="Group_16867" data-name="Group 16867">
+                    <path
+                      id="Path_10928"
+                      data-name="Path 10928"
+                      d="M16,16H8a1,1,0,0,1,0-2h8a1,1,0,0,1,0,2Z"
+                      fill="#acacac"
+                    />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <input
+            type="text"
+            class="form-control rounded-pill border-0 bg-transparent"
+            placeholder="أضف تعليقك"
+            formControlName="comment"
+          />
+        </div>
+      </div>
+      <div class="col-1">
+        <button
+          type="submit"
+          class="text-lightBlue-color fw-bold bg-white border-0 w-100 pt-2"
+          [disabled]="commentForm.invalid"
+        >
+          ارسال
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- ./Add Comment -->
+  <!-- Comments -->
+  <div class="comments-list">
+    <div class="comment mb-4" *ngFor="let comment of comments; let i = index">
+      <div class="comment-user">
+        <!-- user Info -->
+        <div class="row mb-3">
+          <div class="col-lg-3">
+            <div class="row">
+              <div class="col-3">
+                <div class="user-image pt-1">
+                  <img
+                    src="../../../../../../assets/images/icons/user.png"
+                    alt=""
+                    class="img-fluid w-100"
+                  />
+                </div>
+              </div>
+              <div class="col-9">
+                <h5 class="fw-bold">{{ comment?.clientFullName }}</h5>
+                <p class="text-black-50 mb-0">{{ comment?.creationDate }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./user Info -->
+        <!-- comment text -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <p class="text-secondary mb-0 h5">{{ comment?.content }}</p>
+          </div>
+        </div>
+        <!-- ./comment text -->
+
+        <!-- Replay -->
+        <div class="replay">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="row" *ngIf="visibleIndex != i && !comment?.replay && comment?.advertiserId==userId">
+                <div class="col-12">
+                  <a
+                    href="#"
+                    class="text-lightblue-color fw-bold text-decoration-none"
+                    (click)="toggleReplayBox($event, comment?.commentId, i)"
+                    >الرد</a
+                  >
+                </div>
+              </div>
+              <!-- Add Replay -->
+              <form
+                *ngIf="visibleIndex == i"
+                class="row bg-white custom-br shadow-sm py-3 px-4"
+                [formGroup]="replayForm"
+                (ngSubmit)="add('replay')"
+              >
+                <div class="col-1 text-center">
+                  <label class="d-inline-block">
+                    <img
+                      src="../../../../../assets/images/icons/user.png"
+                      alt=""
+                      class="user-img"
+                    />
+                  </label>
+                </div>
+                <div class="col-10">
+                  <div class="input-group bg-light rounded-pill border">
+                    <div class="input-group-text border-0 bg-transparent">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="28"
+                        viewBox="0 0 30 28"
+                      >
+                        <g id="commegr" transform="translate(-1 -2)">
+                          <g id="_x31_4_comment">
+                            <g id="Group_16865" data-name="Group 16865">
+                              <path
+                                id="Path_10926"
+                                data-name="Path 10926"
+                                d="M8,30a1,1,0,0,1-1-1V24H4a3,3,0,0,1-3-3V5A3,3,0,0,1,4,2H28a3,3,0,0,1,3,3V21a3,3,0,0,1-3,3H15.851L8.625,29.781A1,1,0,0,1,8,30ZM4,4A1,1,0,0,0,3,5V21a1,1,0,0,0,1,1H8a1,1,0,0,1,1,1v3.92l5.875-4.7A1,1,0,0,1,15.5,22H28a1,1,0,0,0,1-1V5a1,1,0,0,0-1-1Z"
+                                fill="#acacac"
+                              />
+                            </g>
+                            <g id="Group_16866" data-name="Group 16866">
+                              <path
+                                id="Path_10927"
+                                data-name="Path 10927"
+                                d="M24,12H8a1,1,0,0,1,0-2H24a1,1,0,0,1,0,2Z"
+                                fill="#acacac"
+                              />
+                            </g>
+                            <g id="Group_16867" data-name="Group 16867">
+                              <path
+                                id="Path_10928"
+                                data-name="Path 10928"
+                                d="M16,16H8a1,1,0,0,1,0-2h8a1,1,0,0,1,0,2Z"
+                                fill="#acacac"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control rounded-pill border-0 bg-transparent"
+                      placeholder="أضف تعليقك"
+                      formControlName="replay"
+                    />
+                  </div>
+                </div>
+                <div class="col-1">
+                  <button
+                    type="submit"
+                    class="text-lightBlue-color fw-bold bg-white border-0 w-100 pt-2"
+                    [disabled]="replayForm.invalid"
+                  >
+                    ارسال
+                  </button>
+                </div>
+              </form>
+              <!-- ./Add Replay -->
+              <!-- Replay Info -->
+              <ng-container *ngIf="comment?.replay">
+                <div class="row mb-3">
+                  <div class="col-lg-1">
+                    <div class="user-img pt-1">
+                      <img
+                        src="../../../../../../assets/images/icons/user.png"
+                        alt=""
+                        class="img-fluid w-100"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-9">
+                    <h6 class="fw-bold pt-2">ايمان اسامة</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 bg-light custom-br">
+                    <p class="text-secondary mb-0 p-2">{{ comment?.replay }}</p>
+                  </div>
+                </div>
+              </ng-container>
+
+              <!-- Replay Info -->
+            </div>
+          </div>
+        </div>
+        <!-- ./Replay -->
+      </div>
+    </div>
+  </div>
+  <!-- ./Comments -->
+</div>

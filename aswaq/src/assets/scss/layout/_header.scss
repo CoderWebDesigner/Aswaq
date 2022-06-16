@@ -1,0 +1,43 @@
+.navbar{
+  .user-image{
+    width: 60px;
+  }
+  .navbar-brand{
+    margin: 0;
+  }
+  .nav-item{
+    .nav-link{
+      svg{
+        fill: #c4d7e6;
+        stroke:#1e527a;
+        width: 40px;
+        transition: fill .4s ease-in-out,stroke .4s ease-in-out;
+      }
+      p{
+        color: $blueColor;
+        transition: fill .4s ease-in-out;
+      }
+      &:hover{
+        svg{
+          fill:#ff917a ;
+          stroke:$orangeColor ;
+        }
+        p{
+          color: $orangeColor;
+        }
+      }
+    }
+    .active{
+      svg{
+        fill:#ff917a ;
+        stroke:$orangeColor ;
+      }
+      p{
+        color: $orangeColor;
+      }
+    }
+    img{
+      width: 40px;
+    }
+  }
+}

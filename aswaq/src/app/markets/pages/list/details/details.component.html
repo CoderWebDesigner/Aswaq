@@ -1,0 +1,179 @@
+<section class="details pb-3">
+  <div
+    class="details-header d-flex justify-content-center align-items-center position-relative mb-3"
+    [ngClass]="{
+      'bg-car': routeType === 'cars',
+      'bg-animal': routeType == 'animals',
+      'bg-furniture': routeType === 'furnitures',
+      'bg-building': routeType == 'buildings'
+    }"
+  >
+    <h1 class="text-white">سوق {{ category[routeType] }}</h1>
+  </div>
+  <div class="container">
+    <div class="row bg-white shadow-sm custom-br mb-4 py-3">
+      <div class="col-lg-6">
+        <div class="details-imgs">
+          <p-galleria
+            [value]="itemDetails?.attachments"
+            [numVisible]="5"
+            [showItemNavigators]="true"
+            [showThumbnailNavigators]="false"
+            [showThumbnails]="true"
+            [showIndicators]="true"
+            class="galleria-rtl"
+          >
+            <ng-template pTemplate="item" let-item>
+              <img [src]="item" [alt]="item.alt" />
+            </ng-template>
+            <ng-template pTemplate="thumbnail" let-item>
+              <div class="grid grid-nogutter justify-content-center">
+                <img [src]="item" />
+              </div>
+            </ng-template>
+          </p-galleria>
+        </div>
+      </div>
+      <div class="col-lg-6 pt-4">
+        <h2 class="fw-bold mb-4">
+          {{ itemDetails?.title }}
+          {{ advertiseType[itemDetails?.advertisementType] }}
+        </h2>
+        <p class="item-price mb-4">
+          {{ itemDetails?.price | number }} ريال سعودى
+        </p>
+        <p class="mb-4 text-secondary">
+          <img
+            src="../../../../../assets/images/icons/location.png"
+            alt=""
+            class="img-fluid ms-2"
+          />
+          {{ itemDetails?.address }}
+        </p>
+        <ul class="list-unstyled px-0">
+          <li class="mb-4"><h4>بيانات المعلن :</h4></li>
+          <li class="mb-4 h5">
+            <img
+              src="../../../../../assets/images/icons/user.png"
+              alt=""
+              class="user-img ms-3 img-fluid"
+            />
+            {{ itemDetails?.ownerFullName }}
+          </li>
+          <li class="mb-4 h5">
+            <i class="fab fa-whatsapp ms-3"></i>
+            {{ itemDetails?.ownerPhoneNumber }}
+          </li>
+        </ul>
+        <button class="w-100 orange-btn py-3 custom-br">
+          <svg
+            id="comment-alt"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 44 43.999"
+            class="px-3"
+          >
+            <path
+              id="Path_10562"
+              data-name="Path 10562"
+              d="M36.667,0H7.333A7.333,7.333,0,0,0,0,7.333v22a7.333,7.333,0,0,0,7.333,7.333H12.65l8.16,6.9a1.833,1.833,0,0,0,2.369,0l8.171-6.9h5.317A7.333,7.333,0,0,0,44,29.333v-22A7.333,7.333,0,0,0,36.667,0Zm3.667,29.333A3.667,3.667,0,0,1,36.667,33H31.35a3.667,3.667,0,0,0-2.367.867L22,39.765l-6.979-5.9h0A3.667,3.667,0,0,0,12.65,33H7.333a3.667,3.667,0,0,1-3.667-3.667v-22A3.667,3.667,0,0,1,7.333,3.667H36.667a3.667,3.667,0,0,1,3.667,3.667Z"
+            />
+            <path
+              id="Path_10563"
+              data-name="Path 10563"
+              d="M7.833,8.667H17A1.833,1.833,0,1,0,17,5H7.833a1.833,1.833,0,1,0,0,3.667Z"
+              transform="translate(5 4.167)"
+            />
+            <path
+              id="Path_10564"
+              data-name="Path 10564"
+              d="M26.167,9H7.833a1.833,1.833,0,0,0,0,3.667H26.167a1.833,1.833,0,0,0,0-3.667Z"
+              transform="translate(5 7.5)"
+            />
+            <path
+              id="Path_10565"
+              data-name="Path 10565"
+              d="M26.167,13H7.833a1.833,1.833,0,1,0,0,3.667H26.167a1.833,1.833,0,0,0,0-3.667Z"
+              transform="translate(5 10.833)"
+            />
+          </svg>
+          إرسال طلب المنتج
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="row">
+          <div class="col-12 bg-white shadow-sm custom-br mb-4 pt-3">
+            <h3>
+              <span
+                class="d-inline-block py-3 px-5 bg-blue-color text-white custom-br mb-4"
+                >تفاصيل الاعلان</span
+              >
+            </h3>
+            <ng-container *ngIf="routeType=='cars'">
+              <app-car-advertisement-details [itemInfo]="itemDetails"></app-car-advertisement-details>
+            </ng-container>
+            <ng-container *ngIf="routeType=='animals'">
+              <app-animal-advertisement-details [itemInfo]="itemDetails"></app-animal-advertisement-details>
+            </ng-container>
+            <ng-container *ngIf="routeType=='furnitures'">
+              <app-furniture-advertisement-details [itemInfo]="itemDetails"></app-furniture-advertisement-details>
+            </ng-container>
+
+          </div>
+          <div class="col-12 bg-white shadow-sm custom-br mb-4 pt-3" *ngIf="routeType=='cars'">
+            <h3>
+              <span
+                class="d-inline-block py-3 px-5 bg-blue-color text-white custom-br mb-4"
+              >
+                مواصفات الاعلان</span
+              >
+            </h3>
+            <p>{{ itemDetails?.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="row">
+          <div class="col-12 mb-4">
+            <h3 class="fw-bold mb-4">خريطه المكان</h3>
+            <p-gmap
+              [options]="options"
+              [overlays]="overlays"
+              [style]="{ width: '100%', height: '320px' }"
+              styleClass="custom-br"
+            ></p-gmap>
+          </div>
+          <div class="col-12 mb-4 text-center">
+            <h3 class="fw-bold mb-4">مشاركة على السوشيال ميديا</h3>
+            <share-buttons
+              [include]="['facebook', 'twitter', 'linkedin', 'pinterest']"
+              [showIcon]="true"
+              [showText]="false"
+              url="http://aswaaqwebsiteapi.aswaaqhirag.com/"
+              description="مشاركة الاعلان"
+            ></share-buttons>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-lg-10">
+        <app-comments
+          [comments]="itemDetails?.comments"
+          [user]="itemDetails?.ownerFullName"
+          [advertiseId]="itemDetails?.id"
+          (onAddComment)="getItemById(itemId)"
+        ></app-comments>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3 class="fw-bold mb-4">إعلانات ليها علاقة</h3>
+      </div>
+      <div class="col-lg-3" *ngFor="let relatedItem of itemDetails?.related">
+        <app-related [relatedItemData]="relatedItem"></app-related>
+      </div>
+    </div>
+  </div>
+</section>

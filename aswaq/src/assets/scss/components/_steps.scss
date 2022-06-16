@@ -1,0 +1,114 @@
+.p-steps{
+  &-title{
+    font-family: $almaraiFont;
+  }
+  &-item{
+    &-link{
+      &:not(.p-disabled){
+        &:focus{
+          box-shadow: none !important;
+        }
+      }
+    }
+    &::before{
+      border-top: 5px solid $orangeColor !important;
+    }
+  }
+  &-number{
+    position: relative;
+    min-width: 40px !important;
+    height: 40px !important;
+    &::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      font-family: 'icomoon';
+      text-align: center;
+      background: #fff;
+      border-radius: 10px;
+      border: 2px solid #000;
+      font-size: 23px;
+      line-height: 37px;
+    }
+  }
+  &-title{
+    font-weight: bold;
+    color: #000;
+  }
+  &-current{
+    .p-steps-number{
+      &::before{
+        background: $orangeColor !important;
+        border-color: $orangeColor !important;
+        color: #fff !important;
+      }
+    }
+    &::before{
+      border-top-color: $orangeColor !important;
+    }
+  }
+
+}
+.p-steps-current ~ .p-steps-item{
+  .p-steps-number{
+    &::before{
+      background: #fff;
+      border-color: #000;
+      color: #000;
+    }
+  }
+  &::before{
+    border-top: 5px solid #dee2e6 !important;
+  }
+}
+.type-icon{
+  .p-steps{
+    &-number{
+      &::before{
+        content: '\e903';
+      }
+    }
+  }
+}
+.agreement-icon{
+  .p-steps{
+    &-number{
+      &::before{
+        content: '\e901';
+      }
+    }
+  }
+}
+.location-icon{
+  .p-steps{
+    &-number{
+      &::before{
+        content: '\e902';
+      }
+    }
+  }
+}
+.data-icon{
+  .p-steps{
+    &-number{
+      &::before{
+        content: '\e904';
+      }
+    }
+  }
+}
+.check-icon{
+  .p-steps{
+    &-number{
+      &::before{
+        content: '\e900';
+      }
+    }
+  }
+}
+
+.p-disabled{
+  opacity: 1;
+}
